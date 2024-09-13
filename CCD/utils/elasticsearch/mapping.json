@@ -1,0 +1,47 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "fingerprint_analyzer": {
+          "tokenizer": "fingerprint_tokenizer"
+        }
+      },
+      "tokenizer": {
+        "fingerprint_tokenizer": {
+          "type": "ngram",
+          "min_gram": 5,
+          "max_gram": 5
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "file_name": {
+        "type": "text"
+      },
+      "file_path": {
+        "type": "text"
+      },
+      "fingerprint": {
+        "analyzer": "fingerprint_analyzer",
+        "type": "text"
+      },
+      "size_normalized_source_code": {
+        "type": "unsigned_long"
+      },
+      "size_fingerprint": {
+        "type": "unsigned_long"
+      },
+      "compression_ratio": {
+        "type": "double"
+      },
+      "execution_time": {
+        "type": "double"
+      },
+      "errors": {
+        "type": "text"
+      }
+    }
+  }
+}

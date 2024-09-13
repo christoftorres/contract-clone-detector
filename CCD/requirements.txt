@@ -1,0 +1,7 @@
+numpy==1.22.3
+ssdeep==3.4
+tqdm==4.66.1
+elasticsearch==7.17.2
+antlr4-python3-runtime==4.13.0
+polyleven==0.7
+argparse==1.4.0
